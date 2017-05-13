@@ -1,7 +1,7 @@
-const log = require('../index.js')
+const log = require('../index.js')('zion')
 
 function logger (msg) {
   log(msg)
 }
 
-logger('There is no spoon!')
+logger({'Matrix': 'There is no spoon!'})
