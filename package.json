@@ -1,6 +1,6 @@
 {
   "name": "asynclog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a logging utility",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,8 @@
     "url": "https://github.com/VikramTiwari/asynclog/issues"
   },
   "homepage": "https://github.com/VikramTiwari/asynclog#readme",
-  "dependencies": {}
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "chalk": "^1.1.3"
+  }
 }

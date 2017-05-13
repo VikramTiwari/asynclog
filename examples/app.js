@@ -1,7 +1,11 @@
 const log = require('../index.js')('zion')
 
-function logger (msg) {
+function logger (msg, error, code) {
   log(msg)
+  log.error(error, code)
+  log.trace(msg)
 }
 
-logger({'Matrix': 'There is no spoon!'})
+logger({
+  matrix: 'There is no spoon!'
+}, 'agents', 'neo')
