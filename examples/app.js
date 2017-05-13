@@ -1,3 +1,7 @@
 const log = require('../index.js')
 
-log('a')
+function logger (msg) {
+  log(msg)
+}
+
+logger('There is no spoon!')

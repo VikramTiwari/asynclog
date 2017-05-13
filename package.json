@@ -19,5 +19,7 @@
     "url": "https://github.com/VikramTiwari/asynclog/issues"
   },
   "homepage": "https://github.com/VikramTiwari/asynclog#readme",
-  "dependencies": {}
+  "dependencies": {
+    "callsite": "^1.0.0"
+  }
 }
