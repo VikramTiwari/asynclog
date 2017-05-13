@@ -1,0 +1,23 @@
+{
+  "name": "asynclog",
+  "version": "0.0.1",
+  "description": "a logging utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VikramTiwari/asynclog.git"
+  },
+  "keywords": [
+    "logging"
+  ],
+  "author": "Vikram Tiwari <vikramtheone1@gmail.com> (http://vikramtiwari.com)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/VikramTiwari/asynclog/issues"
+  },
+  "homepage": "https://github.com/VikramTiwari/asynclog#readme",
+  "dependencies": {}
+}
