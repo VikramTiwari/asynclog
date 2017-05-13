@@ -1,4 +1,4 @@
-const stack = require('callsite')
+const stack = require('./lib/callsite')
 
 function createLogger (namespace) {
   function log (msg) {
