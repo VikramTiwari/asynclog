@@ -33,6 +33,16 @@ log.trace('Include stacktraces, they make it easier to debug.')
 
 [Logs Image]
 
+## External log providers
+
+- Google Cloud
+
+``` bash
+# Set ENV variables before running project
+GCLOUD_PROJECT_ID=ivikramtiwari
+LOG_TRANSPORT=google-cloud
+```
+
 ## Credits
 
 ### Developer: [ 👨‍💻 Vikram Tiwari](https://vikramtiwari.com)
