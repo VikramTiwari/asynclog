@@ -1,7 +1,7 @@
 {
   "name": "asynclog",
-  "version": "0.0.3",
-  "description": "a logging utility",
+  "version": "0.0.4",
+  "description": "logging made easy, useful and scalable",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,12 @@
     "url": "git+https://github.com/VikramTiwari/asynclog.git"
   },
   "keywords": [
-    "logging"
+    "logging",
+    "nodejs",
+    "colors",
+    "easy-to-use",
+    "google-cloud",
+    "stacktrace"
   ],
   "author": "Vikram Tiwari <vikramtheone1@gmail.com> (http://vikramtiwari.com)",
   "license": "GPL-3.0",

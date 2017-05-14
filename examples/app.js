@@ -1,11 +1,7 @@
-const log = require('../index.js')('zion')
+const log = require('../index.js')('myApp')
 
-function logger (msg, error, code) {
-  log(msg)
-  log.error(error, code)
-  log.trace(msg)
-}
-
-logger({
-  matrix: 'There is no spoon!'
-}, 'agents', 'neo')
+log('Logging made', 'easy,', 'useful', 'and scalable.')
+log.warn('Not all problems are solved.')
+log.info('And we are actively working to solve them.')
+log.error('Issues:', 'https://github.com/VikramTiwari/asynclog/issues')
+log.trace('Include stacktraces, they make it easier to debug.')
