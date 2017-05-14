@@ -8,7 +8,7 @@ function hello () {
   log.info('And we are actively working to solve them.')
   log.error('Issues:', 'https://github.com/VikramTiwari/asynclog/issues')
   log.trace('Include stacktraces, they make it easier to debug.')
-  log.event(0, 'Category', 'Action', 'Label', 'Value')
+  log.event(0, 'Category', 'Action', 'Label', 0)
 }
 
 hello()
