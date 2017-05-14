@@ -24,7 +24,7 @@
     "url": "https://github.com/VikramTiwari/asynclog/issues"
   },
   "engines": {
-    "node": ">=6.10.0"
+    "node": ">=7.10.0"
   },
   "homepage": "https://vikramtiwari.github.io/asynclog",
   "dependencies": {
