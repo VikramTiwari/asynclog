@@ -1,5 +1,5 @@
 'use strict'
-const log = require('./index.js')('myApp')
+const log = require('./index')('myApp')
 
 log('Logging made', 'easy,', 'useful', 'and scalable.')
 log.warn('Not all problems are solved.')
