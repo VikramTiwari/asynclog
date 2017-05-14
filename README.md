@@ -21,7 +21,7 @@ yarn add asynclog
 - Start using
 
 ``` javascript
-const log = require('../index.js')('myApp')
+const log = require('asynclog')('myApp')
 
 log('Logging made', 'easy,', 'useful', 'and scalable.')
 log.warn('Not all problems are solved.')

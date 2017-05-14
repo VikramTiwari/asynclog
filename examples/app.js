@@ -1,3 +1,4 @@
+'use strict'
 const log = require('../index.js')('myApp')
 
 log('Logging made', 'easy,', 'useful', 'and scalable.')
