@@ -7,6 +7,8 @@ Logging made easy, useful and scalable
 ## Features
 
 - Easy to use
+- External transport
+- Event tracking
 
 ## How to use
 
@@ -39,8 +41,18 @@ log.trace('Include stacktraces, they make it easier to debug.')
 
 ``` bash
 # Set ENV variables before running project
-GCLOUD_PROJECT_ID=ivikramtiwari
 LOG_TRANSPORT=google-cloud
+GCLOUD_PROJECT_ID=ivikramtiwari # use your project id
+```
+
+## Event Tracking
+
+- Google Analytics
+
+``` bash
+# Set ENV variables before running project
+EVENT_TRACKING=google-analytics
+GA_TRACKING_ID=UA-20640332-8 # use your tracking id
 ```
 
 ## Credits

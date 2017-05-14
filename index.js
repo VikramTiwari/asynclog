@@ -2,6 +2,7 @@
 const stack = require('callsite')
 const chalk = require('chalk')
 const pipe = require('./transports/' + process.env.LOG_TRANSPORT)
+const event = require('./events/' + process.env.EVENT_TRACKING)
 
 exports = module.exports = (namespace) => {
   var log = async(data, ...args) => {
@@ -37,7 +38,7 @@ exports = module.exports = (namespace) => {
 
   log.info = async(data, ...args) => {
     let one = stack()[1]
-    console.info(`${new Date().toISOString().replace('T', ' ').replace('Z', '')} ${namespace} ${chalk.white('INFO')} ${one.getFunctionName() || 'anonymous'} in ${one.getFileName()}:${one.getLineNumber()}\t`, data, ...args)
+    console.info(`${new Date().toISOString().replace('T', ' ').replace('Z', '')} ${namespace} ${chalk.gray('INFO')} ${one.getFunctionName() || 'anonymous'} in ${one.getFileName()}:${one.getLineNumber()}\t`, data, ...args)
     pipe.write(namespace, 'info', {
       function_name: one.getFunctionName() || 'anonymous',
       file_name: one.getFileName(),
@@ -65,6 +66,12 @@ exports = module.exports = (namespace) => {
       message: data,
       data: args
     })
+  }
+
+  log.event = async(id, category, action, label, value) => {
+    let one = stack()[1]
+    console.log(`${new Date().toISOString().replace('T', ' ').replace('Z', '')} ${namespace} ${chalk.white('EVENT')} ${one.getFunctionName() || 'anonymous'} in ${one.getFileName()}:${one.getLineNumber()}\t`, id, category, action, label, value)
+    event(id, category, action, label, value)
   }
 
   return log
