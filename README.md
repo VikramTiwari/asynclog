@@ -1,5 +1,7 @@
 # asynclog
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/VikramTiwari/asynclog.svg)](https://greenkeeper.io/)
+
 Logging made easy, useful and scalable
 
 [![Build Status](https://travis-ci.org/VikramTiwari/asynclog.svg?branch=master)](https://travis-ci.org/VikramTiwari/asynclog) [![NPM Version](https://img.shields.io/npm/v/asynclog.svg)](https://www.npmjs.com/package/asynclog) [![NPM Download](https://img.shields.io/npm/dm/asynclog.svg)](https://www.npmjs.com/package/asynclog)
