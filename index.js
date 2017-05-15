@@ -3,9 +3,44 @@ const stack = require('callsite')
 const chalk = require('chalk')
 const pipe = require('./transports/' + process.env.LOG_TRANSPORT)
 const event = require('./events/' + process.env.EVENT_TRACKING)
+const namespaces = process.env.LOG_NAMESPACE || ''
+
+let disabled = []
+let enabled = []
+
+namespaces.split(',').forEach(function (name) {
+  if (name.split('')[0] === '-') {
+    disabled.push(name.substring(1))
+  } else {
+    enabled.push(name)
+  }
+})
+
+function isEnabled (namespace) {
+  if (disabled.indexOf(namespace) > -1) {
+    return false
+  } else {
+    if (namespaces.split(',').indexOf('*') > -1) {
+      return true
+    } else if (enabled.indexOf('namespace') > -1) {
+      return true
+    }
+  }
+}
 
 exports = module.exports = (namespace) => {
-  var log = async(data, ...args) => {
+  if (!isEnabled(namespace)) {
+    let log = () => {}
+    log.assert = () => {}
+    log.error = () => {}
+    log.info = () => {}
+    log.trace = () => {}
+    log.warn = () => {}
+    log.event = () => {}
+    return log
+  }
+
+  let log = async(data, ...args) => {
     let one = stack()[1]
     console.log(`${new Date().toISOString().replace('T', ' ').replace('Z', '')} ${namespace} ${chalk.green('LOG')} ${one.getFunctionName() || 'anonymous'} in ${one.getFileName()}:${one.getLineNumber()}\t`, data, ...args)
     pipe.write(namespace, 'log', {

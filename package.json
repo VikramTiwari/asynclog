@@ -1,6 +1,6 @@
 {
   "name": "asynclog",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "logging made easy, useful and scalable",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,9 @@
     "colors",
     "easy-to-use",
     "google-cloud",
-    "stacktrace"
+    "stacktrace",
+    "google-analytics",
+    "event-tracking"
   ],
   "author": "Vikram Tiwari <vikramtheone1@gmail.com> (http://vikramtiwari.com)",
   "license": "GPL-3.0",
