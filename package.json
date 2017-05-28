@@ -4,7 +4,7 @@
   "description": "logging made easy, useful and scalable",
   "main": "index.js",
   "scripts": {
-    "dev": "ASYNCLOG_NAMESPACE=app:one node example.js",
+    "dev": "ASYNCLOG_NAMESPACE=* node example.js",
     "test": "standard --fix && ava"
   },
   "repository": {

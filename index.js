@@ -1,4 +1,5 @@
 'use strict'
+
 const stack = require('callsite')
 const chalk = require('chalk')
 const namespaces = process.env.ASYNCLOG_NAMESPACE || ''
@@ -6,6 +7,13 @@ const logTransport = require('./transports/log/' + process.env.LOG_TRANSPORT)
 const eventTransport = require('./transports/event/' + process.env.EVENT_TRANSPORT)
 const errorTransport = require('./transports/error/' + process.env.ERROR_TRANSPORT)(process.env.ERROR_TRANSPORT_CONFIG)
 
+// catch all uncaught exceptions
+process.on('uncaughtException', (e) => {
+  console.error(e)
+  errorTransport.report(e)
+})
+
+// check namespaces
 let disabled = []
 let enabled = []
 
@@ -29,12 +37,7 @@ function isEnabled (namespace) {
   }
 }
 
-// catch all uncaught exceptions
-process.on('uncaughtException', (e) => {
-  console.error(e)
-  errorTransport.report(e)
-})
-
+// export loggers
 exports = module.exports = (namespace) => {
   if (!isEnabled(namespace)) {
     let log = () => {}
@@ -76,7 +79,7 @@ exports = module.exports = (namespace) => {
       message: data,
       data: args
     })
-    errorTransport.report(stack)
+    errorTransport.report(stack())
   }
 
   log.info = async(data, ...args) => {

@@ -87,7 +87,7 @@ ERROR_TRANSPORT_CONFIG={"projectId":"ivikramtiwari","ignoreEnvironmentCheck":fal
 | EVENT_TRACKING | `google-analytics` | stream event to google analytics |
 | GA_TRACKING_ID | UA-12345678-9 | required if `google-analytics` was selected as EVENT_TRACKING |
 | ERROR_TRANSPORT | `google-cloud` | stream errors to google cloud's stackdriver error logging |
-| ERROR_TRANSPORT_CONFIG | `{"projectId":"ivikramtiwari","ignoreEnvironmentCheck":false,"logLevel":2}` | required if `google-cloud` was selected as ERROR_TRANSPORT_CONFIG |
+| ERROR_TRANSPORT_CONFIG | `{"projectId":"ivikramtiwari","ignoreEnvironmentCheck":false,"logLevel":2}` | required if `google-cloud` was selected as ERROR_TRANSPORT |
 
 
 ## Credits
