@@ -21,5 +21,8 @@ function hello2 () {
   log2.event(0, 'Category', 'Action', 'Label', 0)
 }
 
+setTimeout(function () {
+  hello()
+}, 1000)
+
 hello2()
-hello()

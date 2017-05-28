@@ -75,6 +75,16 @@ ERROR_TRANSPORT=google-cloud
 ERROR_TRANSPORT_CONFIG={"projectId":"ivikramtiwari","ignoreEnvironmentCheck":false,"logLevel":2} # replace with your own config
 ```
 
+## Trace Reporting
+
+- Google Cloud - Stackdriver Trace
+
+``` bash
+# Set ENV variables before running project
+TRACE_TRANSPORT=google-cloud
+TRACE_TRANSPORT_CONFIG={} # replace with your own config
+```
+
 ## Environment Variables
 
 | ENV Variable | Possible Value | Usage |
@@ -88,6 +98,8 @@ ERROR_TRANSPORT_CONFIG={"projectId":"ivikramtiwari","ignoreEnvironmentCheck":fal
 | GA_TRACKING_ID | UA-12345678-9 | required if `google-analytics` was selected as EVENT_TRACKING |
 | ERROR_TRANSPORT | `google-cloud` | stream errors to google cloud's stackdriver error logging |
 | ERROR_TRANSPORT_CONFIG | `{"projectId":"ivikramtiwari","ignoreEnvironmentCheck":false,"logLevel":2}` | required if `google-cloud` was selected as ERROR_TRANSPORT_CONFIG |
+| TRACE_TRANSPORT | `google-cloud` | stream trace data to google cloud's stackdriver trace |
+| TRACE_TRANSPORT_CONFIG | `{"samplingRate":500}` | required if `google-cloud` was selected as TRACE_TRANSPORT |
 
 
 ## Credits
