@@ -1,7 +1,7 @@
 'use strict'
 
-const log1 = require('./index')('myApp')
-const log2 = require('./index')('yourApp')
+const log1 = require('./index')('app:one')
+const log2 = require('./index')('app:two')
 
 function hello () {
   log1('Logging made', 'easy,', 'useful', 'and scalable.')
@@ -11,8 +11,6 @@ function hello () {
   log1.trace('Include stacktraces, they make it easier to debug.')
   log1.event(0, 'Category', 'Action', 'Label', 0)
 }
-
-hello()
 
 function hello2 () {
   log2('Logging made', 'easy,', 'useful', 'and scalable.')
@@ -24,3 +22,4 @@ function hello2 () {
 }
 
 hello2()
+hello()

@@ -1,10 +1,11 @@
 {
   "name": "asynclog",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "logging made easy, useful and scalable",
   "main": "index.js",
   "scripts": {
-    "test": "standard && ava"
+    "dev": "ASYNCLOG_NAMESPACE=app:one node example.js",
+    "test": "standard --fix && ava"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,9 @@
     "google-cloud",
     "stacktrace",
     "google-analytics",
-    "event-tracking"
+    "event-tracking",
+    "error-reporting",
+    "stackdriver"
   ],
   "author": "Vikram Tiwari <vikramtheone1@gmail.com> (http://vikramtiwari.com)",
   "license": "GPL-3.0",
@@ -30,7 +33,9 @@
   },
   "homepage": "https://vikramtiwari.github.io/asynclog",
   "dependencies": {
+    "@google-cloud/error-reporting": "^0.1.1",
     "@google-cloud/logging": "^1.0.1",
+    "@google-cloud/trace-agent": "^2.0.0",
     "callsite": "^1.0.0",
     "chalk": "^1.1.3",
     "request": "^2.81.0"

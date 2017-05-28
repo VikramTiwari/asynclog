@@ -1,7 +1,7 @@
 'use strict'
 
 const Logging = require('@google-cloud/logging')
-const projectId = process.env.GCLOUD_PROJECT_ID
+const projectId = process.env.GCLOUD_PROJECT
 const loggingClient = Logging({
   projectId: projectId
 })
@@ -20,7 +20,7 @@ const metadata = {
 }
 
 exports = module.exports = {
-  write: async (name, level, data) => {
+  write: async(name, level, data) => {
     const log = loggingClient.log(name)
     const entry = log.entry(metadata, data)
     log[levels[level]](entry).then(() => {
