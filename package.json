@@ -41,7 +41,7 @@
     "request": "^2.81.0"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
+    "ava": "^0.20.0",
     "standard": "^10.0.2"
   }
 }
