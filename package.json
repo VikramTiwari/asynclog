@@ -33,7 +33,7 @@
   },
   "homepage": "https://vikramtiwari.github.io/asynclog",
   "dependencies": {
-    "@google-cloud/error-reporting": "^0.2.1",
+    "@google-cloud/error-reporting": "^0.3.0",
     "@google-cloud/logging": "^1.0.1",
     "@google-cloud/trace-agent": "^2.0.0",
     "callsite": "^1.0.0",
