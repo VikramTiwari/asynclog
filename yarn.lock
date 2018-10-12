@@ -98,6 +98,24 @@
     retry-request "^4.0.0"
     through2 "^2.0.3"
 
+"@google-cloud/common@^0.25.3":
+  version "0.25.3"
+  resolved "https://registry.yarnpkg.com/@google-cloud/common/-/common-0.25.3.tgz#9d565ba9114075f9a9c9ab0d1dda1e2818f79684"
+  dependencies:
+    "@google-cloud/projectify" "^0.3.0"
+    "@google-cloud/promisify" "^0.3.0"
+    "@types/duplexify" "^3.5.0"
+    "@types/request" "^2.47.0"
+    arrify "^1.0.1"
+    duplexify "^3.6.0"
+    ent "^2.2.0"
+    extend "^3.0.1"
+    google-auth-library "^2.0.0"
+    is "^3.2.1"
+    pify "^4.0.0"
+    retry-request "^4.0.0"
+    through2 "^2.0.3"
+
 "@google-cloud/error-reporting@^0.5.0":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@google-cloud/error-reporting/-/error-reporting-0.5.1.tgz#f8479973cc351463d0bd42a4b1eb1fe1974527a4"
@@ -147,12 +165,13 @@
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@google-cloud/promisify/-/promisify-0.3.1.tgz#f641e6d944a8e0a05ee0cb1091dfa60089becdba"
 
-"@google-cloud/trace-agent@^3.0.0":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@google-cloud/trace-agent/-/trace-agent-3.1.1.tgz#85dec822a7240374fa8ae3e345a182b6031614b2"
+"@google-cloud/trace-agent@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@google-cloud/trace-agent/-/trace-agent-3.2.1.tgz#283f73fa326a0f23b9af67c5218460715f0e4b0e"
   dependencies:
-    "@google-cloud/common" "^0.20.3"
+    "@google-cloud/common" "^0.25.3"
     builtin-modules "^3.0.0"
+    console-log-level "^1.4.0"
     continuation-local-storage "^3.2.1"
     extend "^3.0.0"
     gcp-metadata "^0.7.0"
@@ -162,6 +181,7 @@
     require-in-the-middle "^3.0.0"
     semver "^5.4.1"
     shimmer "^1.2.0"
+    teeny-request "^3.9.0"
     uuid "^3.0.1"
 
 "@grpc/grpc-js@^0.2.0":
@@ -1375,6 +1395,10 @@ configstore@^3.0.0:
 console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
+
+console-log-level@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/console-log-level/-/console-log-level-1.4.0.tgz#4035818beea37e5850a0c03c8d450ca5f2cd1217"
 
 contains-path@^0.1.0:
   version "0.1.0"
@@ -3625,6 +3649,10 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
 
+node-fetch@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.2.0.tgz#4ee79bde909262f9775f731e3656d0db55ced5b5"
+
 node-forge@^0.7.4:
   version "0.7.6"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.6.tgz#fdf3b418aee1f94f0ef642cd63486c77ca9724ac"
@@ -4963,6 +4991,14 @@ tar@^4:
     mkdirp "^0.5.0"
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
+
+teeny-request@^3.9.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/teeny-request/-/teeny-request-3.10.0.tgz#6c7d9073499cd0140c67bd367bd3f9ce75e4beae"
+  dependencies:
+    https-proxy-agent "^2.2.1"
+    node-fetch "^2.2.0"
+    uuid "^3.3.2"
 
 term-size@^1.2.0:
   version "1.2.0"
