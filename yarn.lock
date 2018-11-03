@@ -98,6 +98,23 @@
     retry-request "^4.0.0"
     through2 "^2.0.3"
 
+"@google-cloud/common@^0.26.0":
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/@google-cloud/common/-/common-0.26.1.tgz#41880e7f6cb53402b411f9e8352eb030eb15401e"
+  dependencies:
+    "@google-cloud/projectify" "^0.3.1"
+    "@google-cloud/promisify" "^0.3.0"
+    "@types/duplexify" "^3.5.0"
+    "@types/request" "^2.47.0"
+    arrify "^1.0.1"
+    duplexify "^3.6.0"
+    ent "^2.2.0"
+    extend "^3.0.1"
+    google-auth-library "^2.0.0"
+    pify "^4.0.0"
+    retry-request "^4.0.0"
+    through2 "^2.0.3"
+
 "@google-cloud/error-reporting@^0.5.0":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@google-cloud/error-reporting/-/error-reporting-0.5.1.tgz#f8479973cc351463d0bd42a4b1eb1fe1974527a4"
@@ -143,25 +160,31 @@
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@google-cloud/projectify/-/projectify-0.3.0.tgz#adb984ac61f7ec855558ef677621b2488c50d05d"
 
+"@google-cloud/projectify@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@google-cloud/projectify/-/projectify-0.3.1.tgz#cca7b7eeeb5bbde5c16bf7188cbc3a7213965e7c"
+
 "@google-cloud/promisify@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@google-cloud/promisify/-/promisify-0.3.1.tgz#f641e6d944a8e0a05ee0cb1091dfa60089becdba"
 
-"@google-cloud/trace-agent@^3.0.0":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@google-cloud/trace-agent/-/trace-agent-3.1.1.tgz#85dec822a7240374fa8ae3e345a182b6031614b2"
+"@google-cloud/trace-agent@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@google-cloud/trace-agent/-/trace-agent-3.3.0.tgz#43f20788f2d0e2b1bceb966119c959aa43d40b65"
   dependencies:
-    "@google-cloud/common" "^0.20.3"
+    "@google-cloud/common" "^0.26.0"
     builtin-modules "^3.0.0"
+    console-log-level "^1.4.0"
     continuation-local-storage "^3.2.1"
     extend "^3.0.0"
-    gcp-metadata "^0.7.0"
+    gcp-metadata "^0.9.0"
     hex2dec "^1.0.1"
     is "^3.2.0"
     methods "^1.1.1"
     require-in-the-middle "^3.0.0"
     semver "^5.4.1"
     shimmer "^1.2.0"
+    teeny-request "^3.9.0"
     uuid "^3.0.1"
 
 "@grpc/grpc-js@^0.2.0":
@@ -1376,6 +1399,10 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
+console-log-level@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/console-log-level/-/console-log-level-1.4.0.tgz#4035818beea37e5850a0c03c8d450ca5f2cd1217"
+
 contains-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/contains-path/-/contains-path-0.1.0.tgz#fe8cf184ff6670b6baef01a9d4861a5cbec4120a"
@@ -2288,6 +2315,14 @@ gcp-metadata@^0.7.0:
 gcp-metadata@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/gcp-metadata/-/gcp-metadata-0.8.0.tgz#141af57cad333d6da174cff7992d6c64cacdae2c"
+  dependencies:
+    axios "^0.18.0"
+    json-bigint "^0.3.0"
+    retry-axios "0.3.2"
+
+gcp-metadata@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/gcp-metadata/-/gcp-metadata-0.9.0.tgz#0b47298bbd6d3419b58a177f1933216aa251a5c2"
   dependencies:
     axios "^0.18.0"
     json-bigint "^0.3.0"
@@ -3624,6 +3659,10 @@ needle@^2.2.1:
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
+
+node-fetch@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.2.0.tgz#4ee79bde909262f9775f731e3656d0db55ced5b5"
 
 node-forge@^0.7.4:
   version "0.7.6"
@@ -4963,6 +5002,14 @@ tar@^4:
     mkdirp "^0.5.0"
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
+
+teeny-request@^3.9.0:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/teeny-request/-/teeny-request-3.11.0.tgz#2780e3d8d04ecd4947a59b03ccaee273dd9a9122"
+  dependencies:
+    https-proxy-agent "^2.2.1"
+    node-fetch "^2.2.0"
+    uuid "^3.3.2"
 
 term-size@^1.2.0:
   version "1.2.0"
