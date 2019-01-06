@@ -37,7 +37,7 @@
     "@google-cloud/logging": "^4.0.0",
     "@google-cloud/trace-agent": "^3.0.0",
     "callsite": "^1.0.0",
-    "chalk": "^2.0.0",
+    "chalk": "^2.4.2",
     "request": "^2.81.0"
   },
   "devDependencies": {
