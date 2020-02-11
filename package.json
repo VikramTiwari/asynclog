@@ -38,7 +38,7 @@
     "@google-cloud/trace-agent": "^3.0.0",
     "callsite": "^1.0.0",
     "chalk": "^2.0.0",
-    "request": "^2.81.0"
+    "request": "2.88.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
